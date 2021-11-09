@@ -1,0 +1,38 @@
+[
+    {
+        "name": "BMW",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 58000,
+        "img": "https://i.ibb.co/7JwBvVX/bmw.jpg"
+    },
+    {
+        "name": "Ford Mustag",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 45000,
+        "img": "https://i.ibb.co/nQmbHVF/fordmustag.jpg"
+    },
+    {
+        "name": "Honda Civic",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 30000,
+        "img": "https://i.ibb.co/hmQWwVm/hondacivic.jpg"
+    },
+    {
+        "name": "Nissan",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 29000,
+        "img": "https://i.ibb.co/Gpb6pWg/nissan.jpg"
+    },
+    {
+        "name": "Toyota Corolla",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 50000,
+        "img": "https://i.ibb.co/XzBRqFr/toyotacorolla.jpg"
+    },
+    {
+        "name": "Chevorlet",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 60000,
+        "img": "https://i.ibb.co/N33PLxS/chevorlet.jpg"
+    }
+]
