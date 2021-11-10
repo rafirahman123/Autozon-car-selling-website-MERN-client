@@ -22,6 +22,8 @@ import useAuth from '../../../hooks/useAuth';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import Payment from '../Payment/Payment';
 import Myorders from '../Myorders/Myorders';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 
 const drawerWidth = 200;
@@ -31,6 +33,7 @@ function Dashboard(props) {
     const { user, logout } = useAuth();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
+    const { admin } = useAuth();
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -54,6 +57,12 @@ function Dashboard(props) {
             <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}`}>
                 <Button color="inherit">Review</Button>
             </Link>
+            <br />
+            {admin &&
+                <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/makeadmin`}>
+                    <Button color="inherit">Make admin</Button>
+                </Link>
+            }
             <br />
             <List>
                 {user?.email ?
@@ -144,6 +153,9 @@ function Dashboard(props) {
                     <Route path={`${path}/myorders`}>
                         <Myorders></Myorders>
                     </Route>
+                    <AdminRoute path={`${path}/makeadmin`}>
+                        <MakeAdmin></MakeAdmin>
+                    </AdminRoute>
                 </Switch>
 
 
