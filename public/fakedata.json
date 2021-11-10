@@ -32,7 +32,43 @@
     {
         "name": "Chevorlet",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
-        "price": 60000,
+        "price": 62000,
         "img": "https://i.ibb.co/N33PLxS/chevorlet.jpg"
+    },
+    {
+        "name": "Toyota Tacoma",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 50000,
+        "img": "https://i.ibb.co/7YDC6J1/totyotajeep.jpg"
+    },
+    {
+        "name": "Jeep Wrangler",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 60000,
+        "img": "https://i.ibb.co/S0d1tCj/jeep.jpg"
+    },
+    {
+        "name": "Range rover",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 90000,
+        "img": "https://i.ibb.co/166vX05/rangerover.jpg"
+    },
+    {
+        "name": "Ford",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 75000,
+        "img": "https://i.ibb.co/F7pGm14/ford.jpg"
+    },
+    {
+        "name": "Dodge charger",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 66000,
+        "img": "https://i.ibb.co/t8T5D0X/dodge.jpg"
+    },
+    {
+        "name": "Mercedes benz",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, eius.",
+        "price": 70000,
+        "img": "https://i.ibb.co/djjdLBh/mercedes.jpg"
     }
 ]

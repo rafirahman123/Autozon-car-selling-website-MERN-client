@@ -14,7 +14,7 @@ const Product = ({ item }) => {
                         <p class="card-text">{description}</p>
                         <h5 class="card-text">${price}</h5>
                         <Link to={`/purchase/${_id}`}>
-                            <button type="button" class="btn btn-outline-info m-2">Purchase</button>
+                            <button type="button" class="btn btn-outline-dark m-2">Purchase</button>
                         </Link>
                     </div>
                 </div>

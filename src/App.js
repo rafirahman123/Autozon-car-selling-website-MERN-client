@@ -8,10 +8,11 @@ import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import Register from './pages/Login/Register/Register';
-import Explore from './pages/Explore/Explore';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 import Purchase from './pages/Purchase/Purchase';
+import Explores from './pages/Explores/Explores';
+import Notfound from './pages/Notfound/Notfound';
 
 
 function App() {
@@ -26,8 +27,8 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <PrivateRoute path="/explore">
-              <Explore />
+            <PrivateRoute path="/explores">
+              <Explores />
             </PrivateRoute>
             <PrivateRoute path="/purchase/:productId">
               <Purchase />
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register />
+            </Route>
+            <Route path="*">
+              <Notfound />
             </Route>
           </Switch>
         </Router>

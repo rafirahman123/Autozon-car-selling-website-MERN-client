@@ -8,7 +8,7 @@ const Products = () => {
     useEffect(() => {
         fetch('http://localhost:5000/products')
             .then(res => res.json())
-            .then(data => setItems(data))
+            .then(data => setItems(data.slice(0, 6)))
     }, [])
     return (
         <div className="products-container">

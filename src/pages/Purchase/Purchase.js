@@ -108,7 +108,7 @@ const Purchase = () => {
 
                                         {errors.exampleRequired && <span>This field is required</span>}
 
-                                        <input type="submit" value="Purchase" className="btn btn-info w-50" />
+                                        <input type="submit" value="Purchase" className="btn btn-outline-success w-75" />
                                     </form>
                                 </div>
                             </div>
