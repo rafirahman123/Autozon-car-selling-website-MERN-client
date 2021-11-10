@@ -8,7 +8,7 @@ const ManageAllOrder = () => {
     const [allOrder, setAllOrder] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/manageAllOrder')
+        fetch('https://salty-basin-32126.herokuapp.com/manageAllOrder')
             .then(res => res.json())
             .then(data => setAllOrder(data));
     }, [allOrder?._id]);
@@ -16,7 +16,7 @@ const ManageAllOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`https://salty-basin-32126.herokuapp.com/deleteOrder/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

@@ -48,18 +48,22 @@ function Dashboard(props) {
             <Link style={{ textDecoration: 'none', color: 'black' }} to="/home">
                 <Button color="inherit">Home</Button>
             </Link>
-            <Divider />
-            <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/pay`}>
-                <Button color="inherit">Pay</Button>
-            </Link>
-            <br />
-            <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/myorders`}>
-                <Button color="inherit">Myorders</Button>
-            </Link>
-            <br />
-            <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}`}>
-                <Button color="inherit">Review</Button>
-            </Link>
+            {!admin &&
+                <Box>
+                    <Divider />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/pay`}>
+                        <Button color="inherit">Pay</Button>
+                    </Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/myorders`}>
+                        <Button color="inherit">Myorders</Button>
+                    </Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}`}>
+                        <Button color="inherit">Review</Button>
+                    </Link>
+                </Box>
+            }
             <br />
             {admin &&
                 <Box>
