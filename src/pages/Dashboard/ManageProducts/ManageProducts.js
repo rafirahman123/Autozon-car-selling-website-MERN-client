@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
-// import './MyOrders.css'
 
-const Myorders = () => {
+const ManageProduct = () => {
     const { user } = useAuth();
-    const [myOrders, setMyOrders] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${user?.email}`)
+        fetch(`http://localhost:5000/products`)
             .then(res => res.json())
-            .then(data => setMyOrders(data));
-    }, [user?.email]);
+            .then(data => setProducts(data));
+    }, [products]);
 
     const handleDelete = (id) => {
         console.log(id);
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`http://localhost:5000/deleteProduct/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -25,8 +24,8 @@ const Myorders = () => {
                     console.log(data);
                     if (data.deletedCount > 0) {
                         alert("Deleted Successfully");
-                        const remainingOrders = myOrders?.filter(myOrder => myOrder._id !== id);
-                        setMyOrders(remainingOrders);
+                        const remainingProducts = products?.filter(product => product._id !== id);
+                        setProducts(remainingProducts);
                     }
                 });
             console.log(id);
@@ -35,27 +34,24 @@ const Myorders = () => {
 
     return (
         <div className='myOrder-section'>
-            <h1 className='text-info'>My Orders</h1>
+            <h1 className='text-info'>Manage My All Product</h1>
             <Table bordered hover>
                 <thead>
                     <tr>
-                        <th>Order No</th>
-                        <th>Name</th>
-                        <th>Product Name</th>
+                        <th>Product No</th>
+                        <th>Products Name</th>
                         <th>Price</th>
-                        <th>Email</th>
-                        <th>Action</th>
+                        <th>Image</th>
                     </tr>
                 </thead>
-                {myOrders?.map((allOrder, index) => (
+                {products?.map((product, index) => (
                     <tbody>
                         <tr>
                             <td>{index + 1}</td>
-                            <td>{allOrder?.name}</td>
-                            <td>{allOrder?.Name}</td>
-                            <td>{allOrder?.price}</td>
-                            <td>{allOrder?.email}</td>
-                            <button onClick={() => handleDelete(allOrder?._id)} className="btn bg-danger p-2 m-1">Delete</button>
+                            <td>{product?.name}</td>
+                            <td>{product?.price}</td>
+                            <td><img style={{ height: '50px', width: '50px' }} src={product?.img} alt='' /></td>
+                            <button onClick={() => handleDelete(product?._id)} className="btn bg-danger p-2 m-1">Delete</button>
                         </tr>
                     </tbody>
                 ))}
@@ -64,4 +60,4 @@ const Myorders = () => {
     );
 };
 
-export default Myorders;
+export default ManageProduct;
