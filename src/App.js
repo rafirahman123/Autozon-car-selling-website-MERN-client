@@ -5,21 +5,20 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './pages/Home/Home/Home';
-import Header from './pages/Shared/Header/Header';
-import Products from './pages/Products/Products';
-import Footer from './pages/Shared/Footer/Footer';
 import Login from './pages/Login/Login/Login';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import Register from './pages/Login/Register/Register';
 import Explore from './pages/Explore/Explore';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
+import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
+import Purchase from './pages/Purchase/Purchase';
+
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header />
           <Switch>
             <Route exact path="/">
               <Home />
@@ -30,6 +29,12 @@ function App() {
             <PrivateRoute path="/explore">
               <Explore />
             </PrivateRoute>
+            <PrivateRoute path="/purchase/:productId">
+              <Purchase />
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard />
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
@@ -37,7 +42,6 @@ function App() {
               <Register />
             </Route>
           </Switch>
-          <Footer />
         </Router>
       </AuthProvider>
     </div>
