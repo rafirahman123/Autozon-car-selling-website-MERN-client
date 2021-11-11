@@ -13,6 +13,7 @@ const Explores = () => {
     return (
         <>
             <Header />
+            <h1 className="text-secondary m-5">All products</h1>
             <div className="products-container">
                 {
                     items.map(item => <Explore

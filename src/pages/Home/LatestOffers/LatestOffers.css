@@ -1,0 +1,25 @@
+.offer-section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.second-row-images{
+    height: 300px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.first-row-images{
+    width: 400px;
+    height: 665px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.second-row-images:hover{
+    box-shadow: 30px 20px 30px 30px lightgray;
+    border: 1px solid lightgrey;
+}
+.first-row-images:hover{
+    box-shadow: 30px 20px 30px 30px lightgray;
+    border: 1px solid lightgrey;
+}

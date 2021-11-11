@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import useAuth from '../../../hooks/useAuth';
+
 
 
 const ManageAllOrder = () => {
-    const { user } = useAuth();
     const [allOrder, setAllOrder] = useState([]);
 
     useEffect(() => {

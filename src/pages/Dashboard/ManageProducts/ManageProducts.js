@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import useAuth from '../../../hooks/useAuth';
+
 
 const ManageProduct = () => {
-    const { user } = useAuth();
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
