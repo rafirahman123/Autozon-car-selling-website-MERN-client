@@ -6,7 +6,12 @@ import useAuth from '../../../hooks/useAuth';
 
 const AdminRoute = ({ children, ...rest }) => {
     const { user, admin } = useAuth();
-    if (!admin) { return <CircularProgress /> }
+    if (!admin) {
+        return (<>
+            <CircularProgress />
+            <h2>You don't have any access to admin pannel. back to your dashboard. </h2> </>
+        )
+    }
     return (
         <Route
             {...rest}
