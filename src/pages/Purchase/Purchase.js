@@ -25,7 +25,7 @@ const Purchase = () => {
 
     const onSubmit = data => {
         data.email = user?.email;
-        // data.status = 'Pending';
+        data.status = 'Pending';
         fetch('https://salty-basin-32126.herokuapp.com/orders', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },

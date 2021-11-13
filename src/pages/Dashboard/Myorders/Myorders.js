@@ -44,6 +44,7 @@ const Myorders = () => {
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Email</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -55,6 +56,7 @@ const Myorders = () => {
                             <td>{allOrder?.Name}</td>
                             <td>{allOrder?.price}</td>
                             <td>{allOrder?.email}</td>
+                            <td className='text-warning'>{allOrder?.status}</td>
                             <button onClick={() => handleDelete(allOrder?._id)} className="btn bg-danger p-2 m-1">Delete</button>
                         </tr>
                     </tbody>
